@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "e2e83dc6-d954-4e60-b09d-c77dd90c56ec",
+		"name": "Backend Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6921609"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"apud@gmail.com\",\r\n    \"password\": \"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"apud@gmail.com\",\r\n    \"password\": \"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqdWhlcmlAZ21haWwuY29tIiwiaWF0IjoxNzI0NDAwNDIzLCJleHAiOjE3MjQ0MDQwMjN9.u5WZG_Wb7BkZyxD9WbxyUdqNiSGs-J8DDHOA9qEbuHU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user/detail",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user apply job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqdWhlcmlAZ21haWwuY29tIiwiaWF0IjoxNzI0Mzk5NDgxLCJleHAiOjE3MjQ0MDMwODF9.KfJpPFD9sj1Y2BR6hcmmVoRCc2PvebJZiX2KEU4c1AI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"position\": \"Backend Developer\",\r\n    \"name\": \"apud\",\r\n    \"ktp_number\": \"3204321123234562\",\r\n    \"birthday\": \"Bandung, 12 Agustus 1994\",\r\n    \"gender\": \"male\",\r\n    \"religion\": \"Islam\",\r\n    \"blood_type\": \"B\",\r\n    \"status\": \"Belum menikah\",\r\n    \"ktp_address\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\r\n    \"address\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\r\n    \"phone\": \"085156141850\",\r\n    \"closest_person\": \"Apud Santoso\",\r\n    \"skill\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \",\r\n    \"is_out_assignment\": true,\r\n    \"expected_sallary\": 10000000,\r\n    \"signature_date\": \"2024-08-23\",\r\n    \"courses\": [\r\n        {\r\n            \"name\": \"Belajar fullstack dengan teknologi MERN\",\r\n            \"is_certificate\": false,\r\n            \"year\": 2018\r\n        },\r\n        {\r\n            \"name\": \"Belajar backend\",\r\n            \"is_certificate\": false,\r\n            \"year\": 2018\r\n        }\r\n    ],\r\n    \"educations\": [\r\n        {\r\n            \"last_education\": \"D3\",\r\n            \"academic_name\": \"LPKIA\",\r\n            \"major\": \"Teknik Informatika\",\r\n            \"graduation_year\": 2018,\r\n            \"ipk\": \"3.60\"\r\n        }\r\n    ],\r\n    \"employment_histories\": [\r\n        {\r\n            \"company_name\": \"PT. Weltek Healthin Indonesia\",\r\n            \"last_position\": \"Fullstack Developer\",\r\n            \"last_salary\": 8000000,\r\n            \"year\": 2024\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/apply",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "admin login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin get all users with pagination",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/user?page=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"user"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin get user detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MjQzOTgxNTUsImV4cCI6MTcyNDQwMTc1NX0.RkXllIWEfHODUqqPtjjLV23YbviV433RvUngC5O0JC4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/user/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MjQ0MDU3NTcsImV4cCI6MTcyNDQwOTM1N30.-hiif5b_SVPT41wMQzN5bQIa0fePZDYFXXJ9dR_gjEQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 7,\r\n    \"position\": \"Backend Developer\",\r\n    \"name\": \"samsul gunawan\",\r\n    \"ktp_number\": \"3204321123234562\",\r\n    \"birthday\": \"Bandung, 12 Agustus 1994\",\r\n    \"gender\": \"male\",\r\n    \"religion\": \"Islam\",\r\n    \"blood_type\": \"B\",\r\n    \"status\": \"Belum menikah\",\r\n    \"ktp_address\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\r\n    \"address\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\r\n    \"phone\": \"085156141850\",\r\n    \"closest_person\": \"Apud Santoso\",\r\n    \"skill\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \",\r\n    \"is_out_assignment\": true,\r\n    \"expected_sallary\": 10000000,\r\n    \"signature_date\": \"2024-08-23\",\r\n    \"courses\": [\r\n        {\r\n            \"name\": \"Belajar fullstack dengan teknologi MERN\",\r\n            \"is_certificate\": false,\r\n            \"year\": 2018\r\n        }\r\n    ],\r\n    \"educations\": [\r\n        {\r\n            \"last_education\": \"D3\",\r\n            \"academic_name\": \"LPKIA\",\r\n            \"major\": \"Teknik Informatika\",\r\n            \"graduation_year\": 2018,\r\n            \"ipk\": \"3.60\"\r\n        }\r\n    ],\r\n    \"employment_histories\": [\r\n        {\r\n            \"company_name\": \"PT. Weltek Healthin Indonesia\",\r\n            \"last_position\": \"Fullstack Developer\",\r\n            \"last_salary\": 8000000,\r\n            \"year\": 2024\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MjQzOTgxNTUsImV4cCI6MTcyNDQwMTc1NX0.RkXllIWEfHODUqqPtjjLV23YbviV433RvUngC5O0JC4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/user/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
