@@ -22,16 +22,16 @@ const router = Router();
 
 router.get(
   "/user",
-  usersValidator,
   tokenValidator,
   verifyAdminController,
+  usersValidator,
   getUserController,
 );
 router.get(
   "/user/:user_id",
-  userValidator,
   tokenValidator,
   verifyAdminController,
+  userValidator,
   getUserDetailController,
 );
 
@@ -39,9 +39,9 @@ router.post("/login", loginValidator, adminLoginController);
 
 router.put(
   "/user",
-  updateUserValidator,
   tokenValidator,
   verifyAdminController,
+  updateUserValidator,
   updateUserController,
 );
 

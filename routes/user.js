@@ -25,9 +25,9 @@ router.post("/register", registerValidator, userRegisterController);
 
 router.put(
   "/apply",
-  applyValidator,
   tokenValidator,
   verifyUserController,
+  applyValidator,
   userApplyController,
 );
 
